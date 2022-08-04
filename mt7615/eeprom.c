@@ -82,9 +82,12 @@ static int mt7615_eeprom_load(struct mt7615_dev *dev, u32 addr)
 static int mt7615_check_eeprom(struct mt76_dev *dev)
 {
 	u16 val = get_unaligned_le16(dev->eeprom.data);
+	printk(KERN_ERR"andasis check !!!");
+
 
 	switch (val) {
 	case 0x7615:
+		printk(KERN_ERR"andasis check 0x7615 !!!");
 	case 0x7622:
 	case 0x7663:
 		return 0;
@@ -330,6 +333,7 @@ int mt7615_eeprom_init(struct mt7615_dev *dev, u32 addr)
 	int ret;
 
 	ret = mt7615_eeprom_load(dev, addr);
+	printk(KERN_ERR"andasis eeprom_init !!!");
 	if (ret < 0)
 		return ret;
 

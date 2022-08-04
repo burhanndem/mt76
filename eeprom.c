@@ -116,6 +116,7 @@ mt76_eeprom_override(struct mt76_phy *phy)
 		dev_info(dev->dev,
 			 "Invalid MAC address, using random address %pM\n",
 			 phy->macaddr);
+		printk(KERN_ERR"andasis invalid mac !!!");
 	}
 }
 EXPORT_SYMBOL_GPL(mt76_eeprom_override);
